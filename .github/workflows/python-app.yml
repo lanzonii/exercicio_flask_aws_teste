@@ -36,12 +36,13 @@ jobs:
     # - name: Render Deploy Action
     #   uses: johnbeynon/render-deploy-action@v0.0.8
     #   with:
-    #     service-id: srv-crddqnrtq21c73d2d5ag
-    #     api-key: rnd_IcbrR2EIFa6apZawYZdu2bdNApCv
+    #     service-id: <Service-id>
+    #     api-key: <Api-Key>
 
-    - name: Deploy no EC2 -AWS
+    - name: Deploy no EC2
       run: |
-            echo "Conectando no EC2"
-            echo "${{secrets.AWS_KEY_SALAG}}" > private_key && chmod 600 private_key
-            ssh -o StrictHostKeyChecking=no -i private_key ubuntu@ec2-52-23-250-22.compute-1.amazonaws.com "
-                   cd murilex_aula_aws/;git pull;./executar.sh"
+            echo "Conectando aO EC2"
+            echo "${{secrets.AWS_KEY_EXERCICIO}}" > private_key && chmod 600 private_key
+            ssh -o StrictHostKeyChecking=no -i private_key ec2-18-205-107-253.compute-1.amazonaws.com "
+                  cd exercicio_flask_aws_teste/;git pull;./executar.sh"
+
