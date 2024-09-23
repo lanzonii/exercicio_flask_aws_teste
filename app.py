@@ -14,7 +14,7 @@ def hello_world():
             font-family: "Inter", sans-serif;
             font-weight: 800;
             color: #8F2FDB;
-            font-size:500%%;
+            font-size:700%;
         }
     '''
     return f'''
@@ -30,7 +30,7 @@ def hello_world():
         </head>
         <body>
             <div style="margin:5%;">
-                <h1>`{mensagem_1.upper()}</h1>
+                <h1>{mensagem_1.upper()}</h1>
                 <h1>{mensagem_2.upper()}</h1>
             </div>
         </body>
